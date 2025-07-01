@@ -1,0 +1,111 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal do formulário */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* AQUI ESTÁ O "ALARGAMENTO" */
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Grupo de campos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+    font-size: 16px;
+}
+
+/* Efeito ao focar */
+input:focus,
+select:focus {
+    border-color: #0077cc;
+    outline: none;
+}
+
+/* Select múltiplo */
+select[multiple] {
+    height: auto;
+    min-height: 120px;
+    padding: 10px;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #0077cc;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005fa3;
+    cursor: pointer;
+}
+
+
+textarea {
+    width: 100%;      /* ou 500px, 60%, etc. */
+    max-width: 700px; /* opcional, para limitar */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.test_margin{
+    height: 10%;
+    width: 19%;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: flex-end;
+} 
+
+

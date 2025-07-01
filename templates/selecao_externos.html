@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Visitantes</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script>
+        function adicionarVisitante() {
+            const container = document.getElementById('visitantes');
+            const index = container.children.length;
+
+            const novoGrupo = document.createElement('div');
+            novoGrupo.className = 'form-group';
+            
+            novoGrupo.innerHTML = `
+                <label for="nome_visitante_${index}">Nome Completo do Visitante:</label>
+                <input type="text" name="nome_visitante[]" id="nome_visitante_${index}" required>
+
+                <label for="cargo_visitante_${index}">Cargo do Visitante:</label>
+                <input type="text" name="cargo_visitante[]" id="cargo_visitante_${index}" required>
+            `;
+
+            container.appendChild(novoGrupo);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Visitantes</h1>
+        <form method="POST" action="/salvar_visitante">
+            <div id="visitantes">
+                <div class="form-group">
+                    <label for="nome_visitante_0">Nome Completo do Visitante:</label>
+                    <input type="text" name="nome_visitante[]" id="nome_visitante_0" required>
+
+                    <label for="cargo_visitante_0">Cargo do Visitante:</label>
+                    <input type="text" name="cargo_visitante[]" id="cargo_visitante_0" required>
+                </div>
+            </div>
+
+            <div class="test_margin">
+                <button type="button" onclick="adicionarVisitante()" >Adicionar outro visitante</button>
+            </div>
+           
+
+            <div class="form-group">
+                <button type="submit">Cadastrar Visitantes</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

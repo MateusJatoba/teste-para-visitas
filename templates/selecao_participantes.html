@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de participantes</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Seleção de Participantes Internos</h1>
+        <form method="POST" action="/finalizar">
+            <div class="form-group">
+                <label>Participantes Internos:</label>
+                {% for id, nome in colaboradores %}
+                    <label>
+                        <input type="checkbox" name="colaboradores" value="{{ id }}"> {{ nome }}
+                    </label><br>
+                {% endfor %}
+            </div>
+            
+            <div class="form-group" >
+                <button type="submit">Cadastrar visitante</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
